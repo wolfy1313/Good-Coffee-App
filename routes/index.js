@@ -30,7 +30,6 @@ router.get('/reviews/:id', reviewController.getReviewById)
 
 router.get('/reviews', reviewController.getAllReviews)
 
-// need a get all and a getById
 
 
 module.exports = router;
