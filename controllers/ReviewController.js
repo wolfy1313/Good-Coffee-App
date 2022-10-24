@@ -1,3 +1,5 @@
+const { findByIdAndUpdate } = require('../models/review')
+
 const Review = require('../models/review')
 
 const getReviewByListing = async (req, res) => {

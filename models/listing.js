@@ -6,6 +6,7 @@ const Listing = new mongoose.Schema(
     address: {type: String, required: true},
     rating: {type: Number, required: true},
     website: {type: String, required: true},
+    reviewId: {type: mongoose.Schema.Types.ObjectId, ref: 'review_Id'},
     image: {type: String, required: true}
   }
 )
