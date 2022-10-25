@@ -1,29 +1,39 @@
 
 
+import axios from 'axios';
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
-function ReviewForm () {
-  let navigate = useNavigate()
-  const [name, setName] = useState('')
-  const [reviewText, setReviewText] = useState('')
-  const [rating, setRating] = useState('')
 
-  const handleSubmit = (e) => {
+
+function ReviewForm (props) {
+
+  const BASE_URL= process.env.REACT_APP_BASE_URL
+  let { id } = useParams()
+
+  
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate('/coffee-shops/:id')
+    let review = {...props.formState, listingId: id}
+    await axios.post(`${BASE_URL}/reviews`, review)
+    props.toggleReviewSubmitted(!props.reviewSubmitted)
+    props.setFormState(props.initialState);
   }
+
+ 
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
       <h1>Add a Review!</h1>
-      <label>Name:</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)}/>
-      <label>Review:</label>
-        <input type="text" value={reviewText} onChange={(e) => setReviewText(e.target.value)}/>
-      <label for="rating"> Rating (between 1 and 5)</label>
-        <input type="number" id="rating" name="quantity" min="1" max="5" value={rating} onChange={(e) => setRating(e.target.value)}/>
+      <label htmlFor='name'>Name:</label>
+        <input id="name" type="text" onChange={props.handleChange} value={props.formState.name} />
+      <label htmlFor='review'>Review:</label>
+        <input id="reviewText" type="text" onChange={props.handleChange} value={props.formState.reviewText} />
+      <label htmlFor="rating"> Rating (between 1 and 5)</label>
+        <input type="number" id="rating" name="quantity" min="1" max="5"  onChange={props.handleChange}value={props.formState.rating}/>
       <input type="submit" />
       </form>
     </div>

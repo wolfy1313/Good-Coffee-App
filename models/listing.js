@@ -11,3 +11,5 @@ const Listing = new mongoose.Schema(
   }
 )
 module.exports = mongoose.model('Listing', Listing)
+
+// 'review_Id' will be the populate method

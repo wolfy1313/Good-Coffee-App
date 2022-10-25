@@ -24,7 +24,7 @@ const getAllListings = async (req, res) => {
 
 const getListingById = async (req, res) => {
   try {
-    const listing = await Listing.findById(req.params.id)
+    const listing = await Listing.findById(req.params.id).populate('reviewId')
     return res.status(201).json(listing)
   } catch (error) {
     return res.status(500).json({ error: error.message})
