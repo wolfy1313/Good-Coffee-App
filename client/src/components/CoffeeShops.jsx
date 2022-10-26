@@ -17,7 +17,6 @@ useEffect(() => {
     try {
       let res = await axios.get('http://localhost:3001/api/listings')
       setShops(res.data)
-      console.log(shops)
     } catch(err) {
       console.log(err)
     }
@@ -30,7 +29,6 @@ useEffect(() => {
     try {
       let res = await axios.get('http://localhost:3001/api/reviews')
       setShopReviews(res.data)
-      console.log(reviews)
     } catch(err) {
       console.log(err)
     }
@@ -42,7 +40,7 @@ useEffect(() => {
     <div className='shopsContainer'>
       {shops.map(
       ({name, address, rating, website, reviews, image, _id}) => 
-    <div className='shopCard'>
+    <div key= {_id} className='shopCard'>
       <h3>{name}</h3>
       <p>rating: {rating}</p>
       <p>website: {website}</p>
