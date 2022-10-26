@@ -66,7 +66,7 @@ const { id } = useParams()
   </div>
   <div className='shopReviewsContainer'>
     <ReviewForm reviewSubmitted={reviewSubmitted} toggleReviewSubmitted={toggleReviewSubmitted} handleChange={handleChange} formState={formState} setFormState={setFormState} initialState={initialState}/>
-    {shopReviews && (shopReviews?.map(review => (
+    {shopReviews && (shopReviews.map(review => (
       <div key={review._id}><h3>Reviewer: {review.name}</h3><p>Review: {review.reviewText}</p><h4>Rating: {review.rating}</h4> 
       <Link to={`/edit-review/${review._id}`}> <button>Update</button></Link>
       <button onClick={() => {deleteReview(review._id)}}>Delete</button>
