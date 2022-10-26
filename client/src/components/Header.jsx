@@ -3,10 +3,11 @@ import {Link, NavLink} from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div>
+    <div className='header'>
       <Link to="">Home</Link>
       {/* <Link to="review-form">Review Form</Link> */}
       <Link to="coffee-shops">Coffee Shops</Link>
+      
 
     </div>
   )

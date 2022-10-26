@@ -43,7 +43,7 @@ useEffect(() => {
     <div key= {_id} className='shopCard'>
       <h3>{name}</h3>
       <p>rating: {rating}</p>
-      <p>website: {website}</p>
+      <p> website: <a href={website} target="_blank"> {website}</a></p>
       <p>address: {address}</p>
       <p>reviews: {reviews}</p>
      <Link to={`/coffee-shops/${_id}`}><img onClick={() => props.setSelectedShop(_id)}src={image}/></Link>

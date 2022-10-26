@@ -55,17 +55,6 @@ const { id } = useParams()
     toggleReviewSubmitted(!reviewSubmitted)
   }
 
-  // const updateReview = async (reviewId) => {
-  //   console.log(reviewId)
-  //   try {
-  //     // await axios.put(`${BASE_URL}/reviews/${reviewId}`, {})
-  //   } catch (err){
-  //     console.log(err)
-  //   }
-  // }
-
-
-  // update is a combo of getbyId and post.  ** use put instead of post. getbyId and then put. spread review and then add formState. 
   return (
 <> 
   <div className='shopCard'>
