@@ -1,12 +1,12 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import ReviewForm from './ReviewForm'
 
 
 const ShopCard = (props) => {
-  const BASE_URL= process.env.REACT_APP_BASE_URL
+const BASE_URL= process.env.REACT_APP_BASE_URL
 
 const initialState = { name: "", reviewText: "", rating: ""}
 const [selectedShop, setSelectedShop] = useState({})
@@ -55,17 +55,17 @@ const { id } = useParams()
     toggleReviewSubmitted(!reviewSubmitted)
   }
 
-  const updateReview = async (reviewId) => {
-    console.log(reviewId)
-    try {
-      // await axios.put(`${BASE_URL}/reviews/${reviewId}`, {})
-    } catch (err){
-      console.log(err)
-    }
-  }
+  // const updateReview = async (reviewId) => {
+  //   console.log(reviewId)
+  //   try {
+  //     // await axios.put(`${BASE_URL}/reviews/${reviewId}`, {})
+  //   } catch (err){
+  //     console.log(err)
+  //   }
+  // }
 
 
-  // update is a combo of getbyId and post use put instead of post. getbyId and then put. spread review and then add formState. 
+  // update is a combo of getbyId and post.  ** use put instead of post. getbyId and then put. spread review and then add formState. 
   return (
 <> 
   <div className='shopCard'>
@@ -78,13 +78,13 @@ const { id } = useParams()
   <div className='shopReviewsContainer'>
     <ReviewForm reviewSubmitted={reviewSubmitted} toggleReviewSubmitted={toggleReviewSubmitted} handleChange={handleChange} formState={formState} setFormState={setFormState} initialState={initialState}/>
     {shopReviews?.map(review => (
-      <div key={review._id}><h3>{review.name + " - " + review.reviewText + " - " + review.rating}</h3>
-      <button onClick={() => {updateReview(review._id)}}>Update</button>
+      <div key={review._id}><h3>Reviewer: {review.name}</h3><p>Review: {review.reviewText}</p><h4>Rating: {review.rating}</h4> 
+      <Link to={`/edit-review/${review._id}`}> <button>Update</button></Link>
       <button onClick={() => {deleteReview(review._id)}}>Delete</button>
       </div>
     ))}
   </div>
-  <div className='reviewFormContainer'> 
+  <div className='reviewFormContainer'>
   </div>
 </>
 
@@ -94,5 +94,5 @@ const { id } = useParams()
 
 export default ShopCard
 
-// do a map of reviews, display data for shop like in CoffeeShops
+
 // render ReviewForm on this page
