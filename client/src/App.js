@@ -16,9 +16,6 @@ function App() {
     setSelectedShop(id)
   }
 
-
-  console.log(process.env.REACT_APP_BASE_URL)
-
   return (
     <div className="App">
       <Header />
