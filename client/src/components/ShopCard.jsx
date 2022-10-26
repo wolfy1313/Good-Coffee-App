@@ -10,7 +10,7 @@ const BASE_URL= process.env.REACT_APP_BASE_URL
 
 const initialState = { name: "", reviewText: "", rating: ""}
 const [selectedShop, setSelectedShop] = useState({})
-const [shopReviews, setShopReviews] = useState([])
+const [shopReviews, setShopReviews] = useState(null)
 const [reviewSubmitted, toggleReviewSubmitted] = useState(false)
 const [formState, setFormState] = useState(initialState);
 
