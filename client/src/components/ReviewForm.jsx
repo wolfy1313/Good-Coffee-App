@@ -14,7 +14,7 @@ function ReviewForm (props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let review = {...props.formState, listingId: id}
-    await axios.post(`${BASE_URL}/reviews`, review)
+    await axios.post(`api/reviews`, review)
     props.toggleReviewSubmitted(!props.reviewSubmitted)
     props.setFormState(props.initialState);
   }

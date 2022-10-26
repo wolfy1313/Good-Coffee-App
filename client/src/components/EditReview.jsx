@@ -16,7 +16,7 @@ const EditReview = () => {
     
     const getReviewById = async () => {
       try {
-        let res = await axios.get(`http://localhost:3001/api/reviews/${id}`)
+        let res = await axios.get(`api/reviews/${id}`)
         setFormState(res.data)
       } catch(err) {
         console.log(err)
@@ -27,7 +27,7 @@ const EditReview = () => {
   
   const handleSubmit = async(e) => {
     e.preventDefault();
-    await axios.put(`${BASE_URL}/reviews/${id}`, formState)
+    await axios.put(`api/reviews/${id}`, formState)
     navigate(-1)
   }
   

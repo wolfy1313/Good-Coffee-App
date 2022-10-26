@@ -24,7 +24,7 @@ const { id } = useParams()
 
     const getShopById = async () => {
       try {
-        let res = await axios.get(`http://localhost:3001/api/listings/${id}`)
+        let res = await axios.get(`api/listings/${id}`)
         setSelectedShop(res.data)
       } catch(err) {
         console.log(err)
@@ -37,7 +37,7 @@ const { id } = useParams()
 
     const getReviewsByShopId = async () => {
       try {
-        let res = await axios.get(`http://localhost:3001/api/reviews/listing/${id}`)
+        let res = await axios.get(`api/reviews/listing/${id}`)
         setShopReviews(res.data)
       } catch(err) {
         console.log(err)
@@ -48,7 +48,7 @@ const { id } = useParams()
 
   const deleteReview = async (reviewId) => {
     try {
-    await axios.delete(`${BASE_URL}/reviews/${reviewId}`)
+    await axios.delete(`api/reviews/${reviewId}`)
   } catch(err) {
     console.log(err)
   }

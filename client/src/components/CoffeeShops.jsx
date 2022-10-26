@@ -15,7 +15,7 @@ const [reviews, setShopReviews] = useState([])
 useEffect(() => {
   const getCoffeeShops = async () => {
     try {
-      let res = await axios.get('http://localhost:3001/api/listings')
+      let res = await axios.get('api/listings')
       setShops(res.data)
     } catch(err) {
       console.log(err)
@@ -27,7 +27,7 @@ useEffect(() => {
 useEffect(() => {
   const getShopReviews = async () => {
     try {
-      let res = await axios.get('http://localhost:3001/api/reviews')
+      let res = await axios.get('api/reviews')
       setShopReviews(res.data)
     } catch(err) {
       console.log(err)
