@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../globals'
 
 
 
@@ -15,7 +16,7 @@ const [reviews, setShopReviews] = useState([])
 useEffect(() => {
   const getCoffeeShops = async () => {
     try {
-      let res = await axios.get('api/listings')
+      let res = await axios.get(`${BASE_URL}listings`)
       setShops(res.data)
     } catch(err) {
       console.log(err)
@@ -27,7 +28,7 @@ useEffect(() => {
 useEffect(() => {
   const getShopReviews = async () => {
     try {
-      let res = await axios.get('api/reviews')
+      let res = await axios.get(`${BASE_URL}reviews`)
       setShopReviews(res.data)
     } catch(err) {
       console.log(err)

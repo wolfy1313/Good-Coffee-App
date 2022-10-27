@@ -1,10 +1,9 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate  } from 'react-router-dom'
-
+import { BASE_URL } from '../globals'
 
 const EditReview = () => {
-  const BASE_URL= process.env.REACT_APP_BASE_URL
 
   const navigate = useNavigate()
   const { id } = useParams()
@@ -16,7 +15,7 @@ const EditReview = () => {
     
     const getReviewById = async () => {
       try {
-        let res = await axios.get(`api/reviews/${id}`)
+        let res = await axios.get(`${BASE_URL}reviews/${id}`)
         setFormState(res.data)
       } catch(err) {
         console.log(err)
@@ -27,7 +26,7 @@ const EditReview = () => {
   
   const handleSubmit = async(e) => {
     e.preventDefault();
-    await axios.put(`api/reviews/${id}`, formState)
+    await axios.put(`${BASE_URL}reviews/${id}`, formState)
     navigate(-1)
   }
   

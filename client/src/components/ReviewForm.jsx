@@ -3,18 +3,19 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { BASE_URL } from '../globals';
 
 
 
 function ReviewForm (props) {
 
-  const BASE_URL= process.env.REACT_APP_BASE_URL
+
   let { id } = useParams()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     let review = {...props.formState, listingId: id}
-    await axios.post(`api/reviews`, review)
+    await axios.post(`${BASE_URL}reviews`, review)
     props.toggleReviewSubmitted(!props.reviewSubmitted)
     props.setFormState(props.initialState);
   }

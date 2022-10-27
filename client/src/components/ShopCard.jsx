@@ -3,10 +3,9 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams, Link } from 'react-router-dom'
 import ReviewForm from './ReviewForm'
-
+import { BASE_URL } from '../globals'
 
 const ShopCard = (props) => {
-const BASE_URL= process.env.REACT_APP_BASE_URL
 
 const initialState = { name: "", reviewText: "", rating: ""}
 const [selectedShop, setSelectedShop] = useState({})
@@ -24,7 +23,7 @@ const { id } = useParams()
 
     const getShopById = async () => {
       try {
-        let res = await axios.get(`api/listings/${id}`)
+        let res = await axios.get(`${BASE_URL}listings/${id}`)
         setSelectedShop(res.data)
       } catch(err) {
         console.log(err)
@@ -37,7 +36,7 @@ const { id } = useParams()
 
     const getReviewsByShopId = async () => {
       try {
-        let res = await axios.get(`api/reviews/listing/${id}`)
+        let res = await axios.get(`${BASE_URL}reviews/listing/${id}`)
         setShopReviews(res.data)
       } catch(err) {
         console.log(err)
@@ -48,7 +47,7 @@ const { id } = useParams()
 
   const deleteReview = async (reviewId) => {
     try {
-    await axios.delete(`api/reviews/${reviewId}`)
+    await axios.delete(`${BASE_URL}reviews/${reviewId}`)
   } catch(err) {
     console.log(err)
   }
