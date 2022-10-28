@@ -1,6 +1,105 @@
-.App-header {
-  text-align: center;
+.notMain{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
 }
-body {
-  text-align: center;
+
+body{
+margin-top: 250px;
+} 
+
+.bodyy {
+  display: grid;
+}
+
+.shopsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 5px;
+  border-radius: 100%;
+  width: 20%;
+  height: 20%;
+  font-family: 'BenchNine', sans-serif;
+}
+
+.reviewForm {
+margin-top: 200px;
+text-align: left;
+display: grid;
+}
+button{
+  font-family: 'BenchNine', sans-serif;
+  font-size: 36px;
+}
+input{
+  font-family: 'BenchNine', sans-serif;
+  font-size: 72px;
+}
+textarea{
+  font-family: 'BenchNine', sans-serif;
+  font-size: 48px;
+}
+.shopReviewsContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.currentReviewState{
+  display: block;
+  margin-top: 250px;
+  ;
+}
+
+.shopCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1vw;
+  border: 5px solid black;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -200px;
+  height: 200px;
+  width: 100vw;
+  font-size: 60px;
+  font-family: 'BenchNine', sans-serif;
+  font-weight: 700;
+  background-color: white;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  /* background-image: url("./assets/Good Coffee Austin NEW.png"); */
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 250px;
+  text-align: right;
+  border: 5px solid black;
+  border-radius: 5%;
+}
+
+.headerImage{
+display: flex;
+}
+
+.headerLink {
+  display: flex;
+  align-content: flex-end;
+  font-size:24px;
+  text-align: end;
+}
+
+.notHome{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-image: url('./assets/Good Coffee Austin NEW.png');
+}
+
+.coffeeShopsImg{
+  width: 20vw;
+  height: 20vh;
+  object-fit: contain;
 }

@@ -3,13 +3,13 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='header'>
-      <Link to="">Home</Link>
-      {/* <Link to="review-form">Review Form</Link> */}
-      <Link to="coffee-shops">Coffee Shops</Link>
-      
-
+  <div className='header'>
+     <div> <Link to=""><h3 className='headerLink'>Home</h3></Link>
+      <Link to="coffee-shops"><h3 className='headerLink'>Coffee Shops</h3></Link>
+      </div>
+    <div className='headerImage'> <img src='https://github.com/wolfy1313/MERN-APP/blob/main/client/assets/CoffeeLogo.png?raw=true'/>
     </div>
+  </div>
   )
 }
 

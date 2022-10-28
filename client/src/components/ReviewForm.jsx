@@ -24,7 +24,7 @@ function ReviewForm (props) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="reviewForm" onSubmit={handleSubmit}>
       <h1>Add a Review!</h1>
       <label htmlFor='name'>Name:</label>
         <input id="name" type="text" onChange={props.handleChange} value={props.formState.name} />

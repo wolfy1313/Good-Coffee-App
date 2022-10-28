@@ -39,6 +39,7 @@ const EditReview = () => {
     <div className='currentReviewState'>
       {formState &&
       (<form onSubmit={handleSubmit}>
+      <h4>Name:</h4>
       <input id="name" type="text" defaultValue={formState.name} onChange={handleChange}/>
       <h4>Review: </h4> 
       <textarea id="reviewText" type="text" defaultValue={formState.reviewText} onChange={handleChange}/>

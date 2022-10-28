@@ -17,9 +17,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="notMain">
       <Header />
-      <main>
+      <main className='bodyy'>
         <Routes>
           <Route path='/coffee-shops' element={<CoffeeShops setSelectedShop={selectShop}/>}/>
           <Route path='/' element={<Home />}/>
@@ -33,3 +33,6 @@ function App() {
 }
 
 export default App;
+
+
+// css flexbox for notMain.  header is a div and then body will be a div with a flexbo

@@ -2,7 +2,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Booty Home</div>
+    <div className='notHome'>
+    </div>
   )
 }
 

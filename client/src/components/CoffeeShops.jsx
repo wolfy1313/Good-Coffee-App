@@ -41,13 +41,13 @@ useEffect(() => {
     <div className='shopsContainer'>
       {shops.map(
       ({name, address, rating, website, reviews, image, _id}) => 
-    <div key= {_id} className='shopCard'>
+    <div key= {_id} className='shopCard' style={{backgroundImage:{image}}}>
       <h3>{name}</h3>
       <p>rating: {rating}</p>
       <p> website: <a href={website} target="_blank"> {website}</a></p>
       <p>address: {address}</p>
       <p>reviews: {reviews}</p>
-     <Link to={`/coffee-shops/${_id}`}><img onClick={() => props.setSelectedShop(_id)}src={image}/></Link>
+     <div className='coffeeShopsImg'><Link to={`/coffee-shops/${_id}`}><img style= {{width: "20vw", height: "20vh"}}onClick={() => props.setSelectedShop(_id)}src={image}/></Link></div>
     </div>
     )}</div>
   )
