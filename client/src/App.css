@@ -133,6 +133,7 @@ a:hover{
   font-family: 'BenchNine', sans-serif;
   font-weight: 700;
   background-color: white;
+  border-radius: 2%;
   /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
   /* background-image: url("./assets/Good Coffee Austin NEW.png"); */
   background-repeat: no-repeat;
