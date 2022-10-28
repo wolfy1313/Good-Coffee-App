@@ -1,6 +1,6 @@
 # MERN-APP
 # Coffee Shop Find and Review
-![FlatTrack](https://images.squarespace-cdn.com/content/v1/55aacab5e4b0e8a77a1a3a3a/1536873100729-PAQO0RB17CRT0SESQS8Y/flat%2Btrack%2Bcoffee%2Baustin.jpg?format=1500w)
+![FlatTrack](https://github.com/wolfy1313/MERN-APP/blob/main/client/src/assets/coffee%20home%20logo.png?raw=true)
 ## Date: 10/19/2022
 ### By: Jeremy Harrell
 #### [GitHub](https://github.com/wolfy1313) | [LinkedIn](https://www.linkedin.com/in/jeremy-harrell-67a46a229/) | [Spotify](https://open.spotify.com/artist/3orDENaFfgt5gcLk24QHSS)
@@ -15,9 +15,9 @@
 #### Users will arrive at Home Page and see the Listings section which will be clickable. That will display a page with links to different coffee shops. Each coffee shop will have it's own "card" with details. Users will be able to post reviews for each coffee shop as well as delete them. In the real world users would only be able to report others reviews and delete ones they authored.
 ***
 
-## ![Entity Relationship Diagram](assets/ERD-REACT-MONGO-APP.drawio.png)
+## ![Entity Relationship Diagram](https://github.com/wolfy1313/MERN-APP/blob/main/client/src/assets/ERD%20REACT%20MONGO%20APP.drawio.png?raw=true)
 ***
-![Component Hierarchy Diagram](assets/Org-charts.png)
+![Component Hierarchy Diagram](https://github.com/wolfy1313/MERN-APP/blob/main/client/src/assets/Org%20charts.png?raw=true)
 ***
 ### ***Future Updates***
 [x] REACT Creation 

@@ -101,6 +101,10 @@ a:hover{
   transition: .5s ease;
 }
 
+.shopCard h1{
+  text-shadow: 1px 1px white;
+}
+
 .shopCard:hover{
   box-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black, 5px 5px black, 6px 6px black;
   -webkit-transform: translateX(-3px);
