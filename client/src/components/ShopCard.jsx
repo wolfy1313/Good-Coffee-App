@@ -61,7 +61,7 @@ const { id } = useParams()
       <p>rating: {selectedShop?.rating}</p>
       <p>website: {selectedShop?.website}</p>
       <p>address: {selectedShop?.address}</p>
-      <img src={selectedShop?.image}></img>
+      <img style={{width:"40vw", height: "50vh"}} src={selectedShop?.image}></img>
   </div>
   <div className='shopReviewsContainer'>
     <ReviewForm reviewSubmitted={reviewSubmitted} toggleReviewSubmitted={toggleReviewSubmitted} handleChange={handleChange} formState={formState} setFormState={setFormState} initialState={initialState}/>
