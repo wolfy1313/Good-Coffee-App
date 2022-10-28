@@ -20,14 +20,16 @@
 ![Component Hierarchy Diagram](./assets/Org-charts.png)
 ***
 ### ***Future Updates***
-[ ] REACT Creation 
+[x] REACT Creation 
 
-[ ] MONGOOSE Creation
+[x] MONGOOSE Creation
 
-[ ] HEROKU Deployment
+[x] HEROKU Deployment
 ***
 ### ***Credits***
 
 Markdown Guide: [Markdownguide.org](https://ia.net/writer/support/general/markdown-guide)
 
 Markdown Cheatsheet: [Markdownguide.org](https://www.markdownguide.org/cheat-sheet/)
+
+CSS Transitions Guide : [thebrandsmen.com](https://thebrandsmen.com/css-image-hover-effects/)
