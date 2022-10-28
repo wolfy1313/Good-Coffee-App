@@ -7,7 +7,7 @@ const Header = () => {
      <div> <Link to=""><h3 className='headerLink'>Home</h3></Link>
       <Link to="coffee-shops"><h3 className='headerLink'>Coffee Shops</h3></Link>
       </div>
-    <div className='headerImage'> <img src='https://github.com/wolfy1313/MERN-APP/blob/main/client/assets/CoffeeLogo.png?raw=true'/>
+    <div className='headerImage'> <img src='https://github.com/wolfy1313/MERN-APP/blob/main/client/src/assets/Good%20Coffee%20Austin%20NEW.png?raw=true'/>
     </div>
   </div>
   )

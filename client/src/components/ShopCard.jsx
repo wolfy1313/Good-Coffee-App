@@ -83,4 +83,4 @@ const { id } = useParams()
 export default ShopCard
 
 
-// render ReviewForm on this page
+// render ReviewForm on this pag

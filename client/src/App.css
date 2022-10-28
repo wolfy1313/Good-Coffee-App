@@ -63,7 +63,9 @@ textarea{
   position: fixed;
   display: flex;
   justify-content: space-between;
-  margin-top: -200px;
+  margin-top: -250px;
+  margin-right: 100px;
+  margin-left: 100px;
   height: 200px;
   width: 100vw;
   font-size: 60px;
@@ -76,12 +78,13 @@ textarea{
   background-position: right;
   background-size: 250px;
   text-align: right;
-  border: 5px solid black;
-  border-radius: 5%;
+  /* border: 5px solid black;
+  border-radius: 5%; */
 }
 
 .headerImage{
 display: flex;
+margin-right: 20px;
 }
 
 .headerLink {
