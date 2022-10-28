@@ -5,7 +5,7 @@ import { useParams, Link } from 'react-router-dom'
 import ReviewForm from './ReviewForm'
 import { BASE_URL } from '../globals'
 
-const ShopCard = (props) => {
+const ShopCard = () => {
 
 const initialState = { name: "", reviewText: "", rating: ""}
 const [selectedShop, setSelectedShop] = useState({})
@@ -57,16 +57,18 @@ const { id } = useParams()
   return (
 <> 
   <div className='shopCard'>
-      <h3>{selectedShop?.name}</h3>
+      <h1>{selectedShop?.name}</h1>
       <p>rating: {selectedShop?.rating}</p>
-      <p>website: {selectedShop?.website}</p>
+      <p>website: <a href={selectedShop?.website}target="_blank">{selectedShop?.website}</a></p> 
+      {/* <p> website: <a href={website} target="_blank"> {website}</a></p> */}
       <p>address: {selectedShop?.address}</p>
-      <img style={{width:"40vw", height: "50vh"}} src={selectedShop?.image}></img>
+      <img className="imageOnShopCardPage" src={selectedShop?.image}></img>
+      {/* style={{width:"40vw", height: "50vh"}} */}
   </div>
   <div className='shopReviewsContainer'>
     <ReviewForm reviewSubmitted={reviewSubmitted} toggleReviewSubmitted={toggleReviewSubmitted} handleChange={handleChange} formState={formState} setFormState={setFormState} initialState={initialState}/>
     {shopReviews && (shopReviews.map(review => (
-      <div key={review._id}><h3>Reviewer: {review.name}</h3><p>Review: {review.reviewText}</p><h4>Rating: {review.rating}</h4> 
+      <div className="existingReviews" key={review._id}><h2>Reviewer: {review.name}</h2><p>Review: {review.reviewText}</p><h4>Rating: {review.rating}</h4> 
       <Link to={`/edit-review/${review._id}`}> <button>Update</button></Link>
       <button onClick={() => {deleteReview(review._id)}}>Delete</button>
       </div>

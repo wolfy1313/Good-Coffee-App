@@ -46,7 +46,7 @@ const deleteListing = async (req, res) => {
 
 const updateListing = async (req, res) => {
   try {
-    const listing = await findByIdAndUpdate(req.params.id, req.body, { new: true})
+    const listing = await Listing.findByIdAndUpdate(req.params.id, req.body, { new: true})
     res.status(200).json(listing)
   } catch (error) {
     return res.status(500).json({error: error.message})

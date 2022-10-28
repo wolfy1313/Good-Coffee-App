@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="notMain">
       <Header />
-      <main className='bodyy'>
+      <main onLoad={window.scroll(0,0)} className='bodyy'>
         <Routes>
           <Route path='/coffee-shops' element={<CoffeeShops setSelectedShop={selectShop}/>}/>
           <Route path='/' element={<Home />}/>
