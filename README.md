@@ -17,7 +17,7 @@
 
 ## ![Entity Relationship Diagram](assets/ERD-REACT-MONGO-APP.drawio.png)
 ***
-![Component Hierarchy Diagram](./assets/Org-charts.png)
+![Component Hierarchy Diagram](assets/Org-charts.png)
 ***
 ### ***Future Updates***
 [x] REACT Creation 
