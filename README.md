@@ -30,6 +30,10 @@
 ***
 ### ***Credits***
 
+I received CSS guidance from Madeline Ashley and Kusal Mudalige.
+
+I worked again with my good friend Blake Ball and received guidance on front-end set up from him. 
+
 Markdown Guide: [Markdownguide.org](https://ia.net/writer/support/general/markdown-guide)
 
 Markdown Cheatsheet: [Markdownguide.org](https://www.markdownguide.org/cheat-sheet/)
